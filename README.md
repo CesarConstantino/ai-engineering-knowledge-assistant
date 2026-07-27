@@ -2,205 +2,139 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Latest-green)
-![LangGraph](https://img.shields.io/badge/LangGraph-Agent%20Orchestration-orange)
+![LangGraph](https://img.shields.io/badge/LangGraph-Orquestaci%C3%B3n-orange)
 ![Google Gemini](https://img.shields.io/badge/Google-Gemini-blueviolet)
-![FAISS](https://img.shields.io/badge/Vector%20Database-FAISS-red)
+![FAISS](https://img.shields.io/badge/Base%20Vectorial-FAISS-red)
 
 ---
 
-# 📌 Overview
+# 📌 Descripción General
 
-**AI Engineering Knowledge Assistant** is a Retrieval-Augmented Generation (RAG) application designed to transform unstructured technical documentation into searchable organizational knowledge.
+**AI Engineering Knowledge Assistant** es un asistente inteligente basado en arquitectura **Retrieval-Augmented Generation (RAG)**, diseñado para transformar documentación técnica no estructurada en conocimiento consultable mediante Inteligencia Artificial Generativa.
 
-The solution combines document processing, semantic retrieval, vector databases and Large Language Models (LLMs) to provide contextual answers through natural language interaction.
+La solución integra procesamiento documental, embeddings, búsqueda semántica, bases vectoriales y modelos de lenguaje (LLM) para generar respuestas contextualizadas a partir de fuentes de conocimiento.
 
-This project represents a practical implementation of modern AI Engineering patterns using **LangChain, LangGraph, Google Gemini and FAISS**, with a roadmap toward enterprise AI knowledge solutions.
-
----
-
-# 🎯 Business Problem
-
-Organizations generate large volumes of technical documentation, architecture references and operational knowledge that become difficult to search and reuse efficiently.
-
-This project addresses that challenge by enabling:
-
-- Faster access to technical knowledge.
-- Semantic search over internal documents.
-- AI-assisted knowledge discovery.
-- Reduction of manual information retrieval effort.
+Este proyecto representa una implementación práctica de patrones modernos de **AI Engineering**, utilizando **LangChain, LangGraph, Google Gemini y FAISS**.
 
 ---
 
-# 🏗️ Solution Architecture
+# 🎯 Problema de Negocio
+
+Las organizaciones generan grandes volúmenes de documentación técnica, operativa y arquitectónica que suele estar dispersa y requiere mucho tiempo para localizar información relevante.
+
+Este asistente permite:
+
+- Reducir tiempos de búsqueda de información.
+- Facilitar consultas mediante lenguaje natural.
+- Recuperar conocimiento desde documentos empresariales.
+- Crear una base para asistentes inteligentes especializados.
+
+---
+
+# 🏗️ Arquitectura de Solución
 
 ```text
-PDF Documents
+Documentos PDF
       |
       v
-Document Loader
+Carga y procesamiento documental
 (PyPDFLoader)
       |
       v
-Text Chunking
+Fragmentación de texto
       |
       v
-Gemini Embeddings
+Embeddings
+(Google Gemini)
       |
       v
-FAISS Vector Database
+Base Vectorial
+(FAISS)
       |
       v
-Semantic Retrieval
+Recuperación Semántica
       |
       v
-LangGraph Workflow
+Orquestación del flujo
+(LangGraph)
       |
       v
-Google Gemini LLM
+Modelo Generativo
+(Google Gemini)
       |
       v
-Contextual Response
+Respuesta contextualizada
 ```
 
-Detailed architecture documentation:
+Documentación detallada:
 
-- [Architecture Documentation](docs/ARCHITECTURE.md)
-
----
-
-# 🚀 Key Capabilities
-
-- Retrieval-Augmented Generation (RAG).
-- PDF document processing.
-- Semantic search using embeddings.
-- Vector similarity retrieval with FAISS.
-- LLM response generation with Google Gemini.
-- Agent workflow orchestration with LangGraph.
-- Modular architecture prepared for future evolution.
+- [Arquitectura del sistema](docs/ARCHITECTURE.md)
 
 ---
 
-# 🛠️ Technology Stack
+# 🚀 Capacidades Principales
 
-| Technology | Purpose |
+- Arquitectura Retrieval-Augmented Generation (RAG).
+- Procesamiento automático de documentos PDF.
+- Generación de embeddings semánticos.
+- Búsqueda vectorial con FAISS.
+- Integración con modelos generativos Gemini.
+- Orquestación mediante LangGraph.
+- Arquitectura modular preparada para evolución.
+
+---
+
+# 🛠️ Stack Tecnológico
+
+| Tecnología | Uso |
 |---|---|
-| Python | Core development language |
-| LangChain | LLM application framework |
-| LangGraph | Agent workflow orchestration |
-| Google Gemini | Generative AI model |
-| Gemini Embeddings | Semantic representation |
-| FAISS | Vector database |
-| PyPDFLoader | Document ingestion |
-| Git/GitHub | Version control |
+| Python | Lenguaje principal |
+| LangChain | Framework para aplicaciones LLM |
+| LangGraph | Orquestación de flujos inteligentes |
+| Google Gemini | Modelo generativo |
+| Gemini Embeddings | Representación semántica |
+| FAISS | Base de datos vectorial |
+| PyPDFLoader | Ingesta documental |
+| Git/GitHub | Control de versiones |
 
 ---
 
-# 📂 Project Structure
+# 💼 Aplicaciones Profesionales
 
-```text
-ai-engineering-knowledge-assistant/
-│
-├── data/
-│   └── PDF documents
-│
-├── src/
-│   ├── graph.py
-│   ├── llm.py
-│   ├── retriever.py
-│   ├── memory.py
-│   └── tools.py
-│
-├── docs/
-│   └── ARCHITECTURE.md
-│
-├── vector_store/
-├── app.py
-├── ingest.py
-├── config.py
-├── requirements.txt
-└── README.md
-```
+La arquitectura puede evolucionar hacia soluciones empresariales como:
+
+- Asistentes de conocimiento corporativo.
+- Copilotos técnicos.
+- Asistentes de cumplimiento y riesgo.
+- Asistentes de inteligencia antifraude.
+- Sistemas de apoyo a la toma de decisiones.
 
 ---
 
-# ⚙️ Execution
+# 📈 Evolución Estratégica
 
-```bash
-git clone https://github.com/CesarConstantino/ai-engineering-knowledge-assistant.git
-
-python -m venv .venv
-
-pip install -r requirements.txt
-```
-
-Configure environment variables:
-
-```env
-GOOGLE_API_KEY=YOUR_API_KEY
-```
-
-Generate the vector database:
-
-```bash
-python ingest.py
-```
-
-Run the application:
-
-```bash
-python app.py
-```
-
----
-
-# 💼 Business Applications
-
-This architecture can evolve into enterprise solutions such as:
-
-- Corporate knowledge assistants.
-- Technical documentation copilots.
-- Risk and compliance assistants.
-- Fraud intelligence assistants.
-- AI-powered decision support systems.
-
----
-
-# 📈 Strategic Evolution
-
-## Current Stage
+## Etapa actual
 
 AI Engineering Knowledge Assistant
 
-## Future Evolution
+## Evolución futura
 
 NEXA 360 Intelligence Platform:
 
 - Enterprise Knowledge Assistant.
 - Fraud Intelligence Assistant.
 - Risk Analysis Copilot.
-- AI decision-support solutions.
+- Soluciones de decisión asistida por IA.
 
 ---
 
-# 📚 Skills Demonstrated
-
-- AI Engineering.
-- Retrieval-Augmented Generation architectures.
-- Large Language Models.
-- Vector databases.
-- Agent orchestration.
-- Software architecture applied to AI systems.
-- Git and GitHub professional workflows.
-
----
-
-# 👨‍💻 Author
+# 👨‍💻 Autor
 
 ## César Constantino
 
 **AI Strategist | AI Engineer | Fraud Prevention Architect**
 
-Specialist in Fraud Prevention, Artificial Intelligence, Machine Learning and AI architectures applied to business problems.
+Especialista en Prevención de Fraude, Inteligencia Artificial, Machine Learning y arquitecturas IA aplicadas a problemas de negocio.
 
 GitHub:
 
@@ -208,6 +142,6 @@ https://github.com/CesarConstantino
 
 ---
 
-# 📄 License
+# 📄 Licencia
 
-This project was initially developed as part of the AI Engineering learning journey and evolved into a professional AI Engineering portfolio project.
+Proyecto iniciado como parte del aprendizaje de AI Engineering y evolucionado como activo profesional de portafolio tecnológico.
